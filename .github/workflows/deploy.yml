@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy Docker Image
 
 on:
   push:
@@ -9,13 +9,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    # Step 1: Checkout code
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
+    # Step 2: Build Docker image
     - name: Build Docker image
-      run: docker build . -t harishneel/next-js-app:latest
+      run: docker build . -t naveenprasanthp/next-js-app:latest
 
-    - name: Login to DockerHub
-      run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+    # Step 3: Login to Docker Hub
+    - name: Login to Docker Hub
+      run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
 
+    # Step 4: Push Docker image
     - name: Push Docker image
-      run: docker push harishneel/next-js-app:latest
+      run: docker push naveenprasanthp/next-js-app:latest
