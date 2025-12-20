@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Build Docker image
-      run: docker build . -t naveenprasanthp/next-js-app:lat
+      - name: Build Docker image
+        run: docker build . -t naveenprasanthp/next-js-app:latest
 
-    - name: Login to DockerHub
-      run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+      - name: Login to DockerHub
+        run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
-    - name: Push Docker image
-      run: docker push naveenprasanthp/next-js-app:latest
+      - name: Push Docker image
+        run: docker push naveenprasanthp/next-js-app:latest
