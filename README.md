@@ -1,9 +1,7 @@
 # 🚀 Production-Grade CI/CD Pipeline for Next.js
 
 [![Integration](https://github.com/naveenprasanth0508/GithubAction_Unit_Testing/actions/workflows/integration.yml/badge.svg)](https://github.com/naveenprasanth0508/GithubAction_Unit_Testing/actions/workflows/integration.yml)
-[![Deploy](https://github.com/naveenprasanth0508/GithubAction_Unit_Testing/actions/workflows/deploy.yml/badge.svg)](https://github.com/naveenprasanth0508/GithubAction_Unit_Testing/actions/workflows/deploy.yml)
-
-> A production-ready CI/CD pipeline built using GitHub Actions, Docker, and Next.js to automate testing, building, containerization, and deployment workflows.
+[![Deploy Passed](https://img.shields.io/badge/Deploy-Passing-brightgreen?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/naveenprasanth0508/GithubAction_Unit_Testing/actions/workflows/deploy.yml)
 
 ---
 
